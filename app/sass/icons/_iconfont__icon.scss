@@ -1,0 +1,67 @@
+$global-font-icon: 'myicons';
+
+@font-face {
+ font-family: $global-font-icon;
+ src:url("../fonts/myicons.eot");
+ src:url("../fonts/myicons.?#iefix") format("embedded-opentype"),
+   url("../fonts/myicons.woff") format("woff"),
+   url("../fonts/myicons.ttf") format("truetype"),
+   url("../fonts/myicons.#myicons") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+
+.icon {
+ font-family: $global-font-icon;
+
+ &:before {
+   /* Some common icon stuff */
+ }
+
+ &.-arrow_down {
+   &:before {
+     content: $icon-arrow_down;
+   }
+ }
+ &.-bell {
+   &:before {
+     content: $icon-bell;
+   }
+ }
+ &.-dollar {
+   &:before {
+     content: $icon-dollar;
+   }
+ }
+ &.-heart {
+   &:before {
+     content: $icon-heart;
+   }
+ }
+ &.-mail {
+   &:before {
+     content: $icon-mail;
+   }
+ }
+ &.-pen {
+   &:before {
+     content: $icon-pen;
+   }
+ }
+ &.-plus {
+   &:before {
+     content: $icon-plus;
+   }
+ }
+ &.-star {
+   &:before {
+     content: $icon-star;
+   }
+ }
+ &.-user {
+   &:before {
+     content: $icon-user;
+   }
+ }
+
+}

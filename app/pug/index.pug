@@ -1,0 +1,145 @@
+include modules/mixins.pug
+
+doctype html
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html(lang="en")
+
+	head
+		include modules/head.pug		
+	body
+		.content-wrp
+			section.top-line
+				header.header
+					a.logo(href="#") iWrite
+					nav
+						ul.nav
+							li.nav__item 
+								a.active(href="#") Orders
+							li.nav__item 
+								a(href="#") Support
+							li.nav__item 
+								a(href="#") Profile
+							li.nav__item 
+								a(href="#") Balance
+
+						.user-nav
+							.add-order 
+								span.icon-plus.add-order__icon
+								|New order
+							.like.icons.icon-heart
+							.notice.icon-bell
+								+user_online
+							.member
+								.member-icon.icon-user
+								ul.member-menu
+									li
+										a(href="#") Log out
+									li
+										a(href="#") Newsletters
+
+			.content
+				.options
+					ul.options__nav
+						li.active Recent 
+						li Finished 
+						li Canceled
+					.options__sort Sorted by 
+						span ID
+				.options__info
+					.options__head
+						ul
+							li.titleWidth Title
+							li.deadlineWidth Deadline
+							li.statusWidth Status
+							li.assignedWidth Assigned to
+							li.costWidth Price / Paid
+							li.idWidth ID
+
+					.options__body
+						.selected
+							.title-info.titleWidth
+								div.title-info__title
+									|What is State Regulations? Why is it imprtant? Provide concrete examples.
+								div
+									|Psychology and Education, Argumentative essay
+							.deadline-info.deadlineWidth
+								time May 28, 11:59 AM
+								div 4 days left
+							.status-info.statusWidth
+								|Progress (pages 1 of 5)
+								.status-info__progress
+									.status-info__in-process
+							.assigned.assignedWidth
+								.user-avatar
+									
+								.user-name
+								.user-rating
+									.icon-star
+									span 9.8
+							.cost.costWidth
+								.cost__price 1250
+								.cost__price 100
+							.id.idWidth
+								|#34453456
+
+						.selected
+							.title-info.titleWidth
+								div.title-info__title
+									|What is State Regulations? Why is it imprtant? Provide concrete examples.
+								div
+									|Psychology and Education, Argumentative essay
+							.deadline-info.deadlineWidth
+								time May 28, 11:59 AM
+								div 4 days left
+							.status-info.statusWidth
+								|Progress (pages 1 of 5)
+								.status-info__progress
+									.status-info__in-process
+							.assigned.assignedWidth
+								.user-avatar
+								.user-name
+								.user-rating
+									.icon-star
+									span 9.8
+							.cost.costWidth
+								.cost__price 230
+								.cost__price 0
+							.id.idWidth
+								|#34453422
+
+						.selected
+							.title-info.titleWidth
+								div.title-info__title
+									|What is State Regulations? Why is it imprtant? Provide concrete examples.
+								div
+									|Psychology and Education, Argumentative essay
+							.deadline-info.deadlineWidth
+								time May 28, 11:59 AM
+								div 4 days left
+							.status-info.statusWidth
+								|Progress (pages 1 of 5)
+								.status-info__progress
+									.status-info__in-process
+							.assigned.assignedWidth
+								.user-avatar
+								.user-name
+								.user-rating
+									.icon-star
+									span 9.8
+							.cost.costWidth
+								.cost__price 30
+								.cost__price 0
+							.id.idWidth
+								|#34453422
+
+
+
+
+
+
+
+
+		include modules/scripts.pug
