@@ -51,95 +51,42 @@ html(lang="en")
 				.options__info
 					.options__head
 						ul
-							li.titleWidth Title
-							li.deadlineWidth Deadline
-							li.statusWidth Status
-							li.assignedWidth Assigned to
-							li.costWidth Price / Paid
-							li.idWidth ID
+							li.col-name Title
+							li.col-date Deadline
+							li.col-state Status
+							li.col-assigned Assigned to
+							li.col-cost Price / Paid
+							li.col-id ID
 
 					.options__body
-						.selected
-							.title-info.titleWidth
-								div.title-info__title
-									|What is State Regulations? Why is it imprtant? Provide concrete examples.
-								div
-									|Psychology and Education, Argumentative essay
-							.deadline-info.deadlineWidth
-								time May 28, 11:59 AM
-								div 4 days left
-							.status-info.statusWidth
-								|Progress (pages 1 of 5)
-								.status-info__progress
-									.status-info__in-process
-							.assigned.assignedWidth
-								.user-avatar
-									
-								.user-name
-								.user-rating
-									.icon-star
-									span 9.8
-							.cost.costWidth
-								.cost__price 1250
-								.cost__price 100
-							.id.idWidth
-								|#34453456
+						.order#order-template(style="display:none;")
 
-						.selected
-							.title-info.titleWidth
-								div.title-info__title
-									|What is State Regulations? Why is it imprtant? Provide concrete examples.
-								div
-									|Psychology and Education, Argumentative essay
-							.deadline-info.deadlineWidth
-								time May 28, 11:59 AM
-								div 4 days left
-							.status-info.statusWidth
-								|Progress (pages 1 of 5)
-								.status-info__progress
-									.status-info__in-process
-							.assigned.assignedWidth
-								.user-avatar
-								.user-name
-								.user-rating
-									.icon-star
-									span 9.8
-							.cost.costWidth
-								.cost__price 230
-								.cost__price 0
-							.id.idWidth
-								|#34453422
+							.order__name
+								div.order__title
+								div.order__category
 
-						.selected
-							.title-info.titleWidth
-								div.title-info__title
-									|What is State Regulations? Why is it imprtant? Provide concrete examples.
-								div
-									|Psychology and Education, Argumentative essay
-							.deadline-info.deadlineWidth
-								time May 28, 11:59 AM
-								div 4 days left
-							.status-info.statusWidth
-								|Progress (pages 1 of 5)
-								.status-info__progress
-									.status-info__in-process
-							.assigned.assignedWidth
-								.user-avatar
-								.user-name
-								.user-rating
-									.icon-star
-									span 9.8
-							.cost.costWidth
-								.cost__price 30
-								.cost__price 0
-							.id.idWidth
-								|#34453422
+							.order__date
+								div.order__deadline
+								div.order__timeleft
 
+							.order__state
+								.order__status
+								.order__status-bar.status-bar
+									.status-bar__inner
 
+							.order__assigned
+								.order__icon
+									.order__img
+										+user_online
+								.order__user
+									.order__username
+									.order__rate
+										.icon-star.status-icon
 
+							.order__cost
+								.order__price
+								.order__paid
 
-
-
-
+							.order__id
 
 		include modules/scripts.pug
