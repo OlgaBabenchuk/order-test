@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
-	// $(".title-info__title").each(function(){
-	// 	var review_full = $(this).html();
-	// 	var review = review_full;
-	// 	if( review.length > 42 )
-	// 	{
-	// 		review = review.substring(0, 42);
-	// 		$(this).html( review + '...' );
-	// 	}
-	// });
+	$('.options__nav li').on('click', function() {
+		if(!($(this).hasClass('active'))); {
+			$(this).siblings().removeClass('active');
+
+			$(this).addClass('active'); 
+		}
+		
+	});
+
 
 
 	$(function () {
@@ -33,9 +33,9 @@ $(document).ready(function() {
 	console.log(app);
 
 	function parseOrders() {
-	  app.orders.forEach(function(element){
-	    buildOrder(element);
-	  });
+		app.orders.forEach(function(element){
+			buildOrder(element);
+		});
 	}
 
 	function buildOrder(element) {
@@ -45,6 +45,8 @@ $(document).ready(function() {
 	      .css('display', 'flex')
 	      .addClass('order--status_' + element.status);
 	  
+	  console.log(order);
+
 	  // app.fields.forEach(function(field){
 	  //   order.find('.order__' + field).html(element[field]);      
 	  // });
@@ -52,11 +54,18 @@ $(document).ready(function() {
 	  if (element.title.length > 41) order.find('.order__title').html(element.title.slice(0, 41) + '...');
 	  else order.find('.order__title').html(element.title);
 
+	  //console.log(element.title);
+
 	  if (element.category.length > 41) order.find('.order__category').html(element.category.slice(0, 41) + '...');
 	  else order.find('.order__category').html(element.category);
 
+	  //console.log(element.category);
+
 	  order.find('.order__deadline').html(element.deadline);
 	  order.find('.order__timeleft').html(getTimeLeft(element.deadline));
+
+	  console.log(element.deadline);
+	  console.log(element.deadline);
 
 	  if (element.statusMessage) order.find('.order__status').html(element.statusMessage);
 	  else if (element.status === "progress") {
@@ -107,16 +116,26 @@ $(document).ready(function() {
 	  return diffResult + ' left';
 	}
 
+	// function getStatusOrders(status) {
+	//   $('.options__body').children().remove();
+
+	//   app.orders.forEach(function(element){
+	//     if (element.status === status) buildOrder(element);
+	//   });
+	// }
+
 	function getStatusOrders(status) {
-	  $('.options__body').children().remove();
+	  $('.options__body').children().css('display', 'none');
 
 	  app.orders.forEach(function(element){
 	    if (element.status === status) buildOrder(element);
 	  });
 	}
 
+	//console.log(orders);
+
 	function getRecentOrders() {
-	  $('.options__body').children().remove();
+	  $('.options__info .options__body').children().css('display', 'none');
 
 	  var recent = app.orders.sort(function(a, b) {
 	    var aDate = new Date(a.createDate);
@@ -127,7 +146,10 @@ $(document).ready(function() {
 	  recent.forEach(function(element) {
 	    buildOrder(element);
 	  }, this);
+
 	}
+
+	console.log(getRecentOrders);
 
 	$('#finished').on('click', function(e) {
 	  e.preventDefault();
