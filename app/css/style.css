@@ -521,8 +521,8 @@ template
     font-weight: normal;
     font-style: normal; 
 
-    src: url('../fonts/icomoon.eot?q5jako');
-    src: url('../fonts/icomoon.eot?q5jako#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?q5jako') format('truetype'), url('../fonts/icomoon.woff?q5jako') format('woff'), url('../fonts/icomoon.svg?q5jako#icomoon') format('svg');
+    src: url('../fonts/icomoon.eot?byyk9l');
+    src: url('../fonts/icomoon.eot?byyk9l#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?byyk9l') format('truetype'), url('../fonts/icomoon.woff?byyk9l') format('woff'), url('../fonts/icomoon.svg?byyk9l#icomoon') format('svg');
 }
 
 [class^='icon-'],
@@ -541,6 +541,26 @@ template
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-order_box:before
+{
+    content: '\e909';
+}
+
+.icon-settings:before
+{
+    content: '\e90a';
+}
+
+.icon-support:before
+{
+    content: '\e90b';
+}
+
+.icon-wallet:before
+{
+    content: '\e90c';
 }
 
 .icon-arrow_down:before
@@ -641,14 +661,23 @@ body
 {
     font-size: 29px; 
 
+    position: relative;
+
     display: block;
     float: left;
 
     width: 20%;
+    padding-left: 2em;
 
     text-decoration: none;
 
     color: #302410;
+}
+.logo:before
+{
+    font-family: 'icomoon'; 
+
+    content: '\e905';
 }
 
 nav
@@ -702,13 +731,14 @@ nav
 }
 .nav__item a:before
 {
-    font-family: 'icomoon' !important;
-    font-size: 1em;
+    font-family: 'icomoon';
+    font-size: 1.2em;
 
     position: absolute;
-    left: 1.5em;
+    top: .3em;
+    left: 1.2em;
 
-    content: '\e905';
+    content: '';
 
     color: #4a524b;
 }
@@ -719,6 +749,22 @@ nav
 .nav__item a:hover:before
 {
     color: #fff;
+}
+.nav__item .nav__item-order:before
+{
+    content: '\e909';
+}
+.nav__item .nav__item-suppurt:before
+{
+    content: '\e90a';
+}
+.nav__item .nav__item-profile:before
+{
+    content: '\e90a';
+}
+.nav__item .nav__item-balance:before
+{
+    content: '\e90c';
 }
 .nav .active
 {
@@ -1003,7 +1049,7 @@ nav
 {
     color: #54ae56;
 }
-.options__nav .active
+.options__nav li.active
 {
     color: #54ae56;
     border-color: #54ae56;
@@ -1262,6 +1308,8 @@ nav
     top: 0;
     left: 0;
 
+    height: 100%; 
+
     -webkit-border-radius: 3px;
             border-radius: 3px;
 }
@@ -1279,6 +1327,28 @@ nav
     display: inline-block;
 
     margin-left: 1em;
+}
+
+.status-icon
+{
+    font-size: 1.7em;
+
+    display: inline-block;
+
+    color: gold;
+}
+
+.order__rate
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
 }
 
 .order__img

@@ -31,12 +31,19 @@ body {
 }
 
 .logo {
+	position: relative;
 	display: block;
 	width: 20%;
 	float: left;
+	padding-left: 2em;
 	text-decoration: none;
 	color: $color-2;
 	font-size: 29px;
+
+	&:before {
+		content: "\e905";
+		font-family: 'icomoon';
+	}
 }
 
 nav {
@@ -63,11 +70,12 @@ nav {
 			text-transform: uppercase;
 			text-decoration: none;
 			&:before {
-				content: "\e905";
-				font-family: 'icomoon' !important;
+				content: "";
+				font-family: 'icomoon';
 				position: absolute;
-				left: 1.5em;
-				font-size: 1em;
+				left: 1.2em;
+				top: 0.3em;
+				font-size: 1.2em;
 				color: $color-3;
 			}
 			&:hover {
@@ -78,6 +86,19 @@ nav {
 			}
 
 		}
+		.nav__item-order:before {
+			content: "\e909";
+		}
+		.nav__item-suppurt:before {
+			content: "\e90a";
+		}
+		.nav__item-profile:before {
+			content: "\e90a";
+		}
+		.nav__item-balance:before {
+			content: "\e90c";
+		}
+
 	}
 	.active {
 		color: $color-1;
@@ -273,12 +294,12 @@ nav {
 		&:hover {
 			color: $color-5;
 		}
-	}
 
-	.active {
-		color: $color-5;
-		border-color: $color-5;
-	}
+		&.active {
+			color: $color-5;
+			border-color: $color-5;
+		}
+	}	
 }
 
 .options__sort {
@@ -370,8 +391,8 @@ nav {
 		border-color: $color-5;
 
 		.status-bar__inner {
-              background: $color-5;
-        }
+			background: $color-5;
+		}
 	}
 
 	&--status_canceled {
@@ -448,6 +469,7 @@ nav {
 	top: 0;
 	left: 0;
 	border-radius: 3px;
+	height: 100%;
 }
 
 .order__icon {
@@ -459,6 +481,17 @@ nav {
 .order__user {
 	display: inline-block;
 	margin-left: 1em;
+}
+
+.status-icon {
+	display: inline-block;
+	font-size: 1.7em;
+	color: gold;
+}
+
+.order__rate {
+	display: flex;
+	align-items: center;
 }
 
 .order__img {
