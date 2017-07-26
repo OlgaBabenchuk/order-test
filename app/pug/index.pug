@@ -16,14 +16,14 @@ html(lang="en")
 					a.logo(href="#") iWrite
 					nav
 						ul.nav
-							li.nav__item 
-								a.active(href="#") Orders
-							li.nav__item 
-								a(href="#") Support
-							li.nav__item 
-								a(href="#") Profile
-							li.nav__item 
-								a(href="#") Balance
+							li.nav__item
+								a.nav__item-order.active(href="#") Orders
+							li.nav__item
+								a.nav__item-suppurt(href="#") Support
+							li.nav__item.nav__item-profile
+								a.nav__item-profile(href="#") Profile
+							li.nav__item
+								a.nav__item-balance(href="#") Balance
 
 						.user-nav
 							.add-order 
@@ -43,9 +43,9 @@ html(lang="en")
 			.content
 				.options
 					ul.options__nav
-						li.active Recent 
-						li Finished 
-						li Canceled
+						li.active#recent Recent 
+						li#finished Finished 
+						li#canceled Canceled
 					.options__sort Sorted by 
 						span ID
 				.options__info
